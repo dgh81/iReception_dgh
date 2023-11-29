@@ -1,0 +1,91 @@
+html * {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+.autocomplete {
+    width: 500px;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+}
+
+.autocomplete input {
+    width: 100%;
+    border: none;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 10px 10px 0 10 px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.suggestions {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    border-top: 1px solid #d4d4d4;
+    background-color: #f7f7f7;
+    border-radius: 0 0 10px 10px;
+}
+
+.suggestions li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #d4d4d4;
+}
+
+#heading {
+    text-align: center;
+}
+
+.inputs {
+    margin: 10px 10px 10px 10px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color:#d4d4d4;
+}
+
+#ok_button {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    background-color: #A0CE4E;
+    color: #f7f7f7;
+    font-size: large;
+    margin-top: 30px;
+}
+
+#end_button {
+    width: 45%;
+    height: auto;
+    /* margin: 0 auto; */
+    margin-right: 5%;
+    padding: 10px;
+    position: relative;
+    background-color: #A0CE4E;
+    color: #f7f7f7;
+    font-size: large;
+    margin-top: 30px;
+}
+
+#back_button {
+    width: 45%;
+    height: auto;
+    /* margin: 0 auto; */
+    margin-left: 5%;
+    padding: 10px;
+    position: relative;
+    background-color: #A0CE4E;
+    color: #f7f7f7;
+    font-size: large;
+    margin-top: 30px;
+}
