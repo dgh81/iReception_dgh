@@ -64,7 +64,7 @@ input:focus {
     margin-top: 30px;
 }
 
-#end_button {
+#back_button {
     width: 45%;
     height: auto;
     /* margin: 0 auto; */
@@ -77,7 +77,7 @@ input:focus {
     margin-top: 30px;
 }
 
-#back_button {
+#end_button {
     width: 45%;
     height: auto;
     /* margin: 0 auto; */

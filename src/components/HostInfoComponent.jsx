@@ -7,8 +7,6 @@ import { useContext } from "react";
 
 export const HostInfoComponent = (res) => {
 
-    // document.getElementById('heading').innerHTML = 'Please select your host.';
-
     let user = useContext(UserContext);
     // console.log('user.name:' + user.name);
     // console.log('user.company:' + user.company);
@@ -30,15 +28,13 @@ export const HostInfoComponent = (res) => {
     };
 
 
-
     return (
-        // <div className='autocomplete'>
         <div>
             <h2>Please search for and select your host</h2>
             <h4>If you do not know the name of your host, please ask for help in the reception</h4>
-            <AutoComplete response={res.response.userList} />
-            <Button onClick={back} id="end_button">BACK</Button>
-            <Button onClick={end} id="back_button">OK</Button>
+            <AutoComplete userList={res.response.userList} />
+            <Button onClick={back} id="back_button">BACK</Button>
+            <Button onClick={end} id="end_button">OK</Button>
         </div>
     );
 }

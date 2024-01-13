@@ -10,10 +10,30 @@ export const GuestInfoComponent = () => {
     let user = useContext(UserContext);
 
     function okClick() {
+
         user.name = document.getElementById('name').value;
         user.company = document.getElementById('company').value;
         user.phone = document.getElementById('phone').value;
         user.mail = document.getElementById('mail').value;
+
+
+        if (String(document.getElementById('name').value).length === 0) {
+            document.getElementById('name').placeholder = "venligst udfyld dit navn";
+            return
+        };
+        if (String(document.getElementById('company').value).length === 0) {
+            document.getElementById('company').placeholder = "venligst udfyld din virksomhed";
+            return
+        };
+        if (String(document.getElementById('phone').value).length === 0) {
+            document.getElementById('phone').placeholder = "venligst udfyld dit telefonnummer";
+            return
+        };
+        if (String(document.getElementById('mail').value).length === 0) {
+            document.getElementById('mail').placeholder = "venligst udfyld din e-mail";
+            return
+        };
+
         navigate("/hostinfo");
     };
 

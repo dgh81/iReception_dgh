@@ -18,7 +18,6 @@ export const pca = new PublicClientApplication(config);
 
 pca.addEventCallback(event => {
     if (event.eventType === EventType.LOGIN_SUCCESS) {
-        console.log('event callback from index.js:' + event);
         pca.setActiveAccount(event.payload.account);
     }
 });

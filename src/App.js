@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import { GuestInfo } from "./pages/GuestInfo";
 import { End } from "./pages/End";
 import UserContext from "./components/UserContext";
-// import { Mail } from "./pages/Mail_notused";
 
 function App({ msalInstance }) {
     // global user object sat i context:
@@ -44,12 +43,10 @@ const Pages = () => {
         console.log(error);
     };
 
-    // TODO: Tjek lige hvordan det her virker ?!
     useEffect(() => {
         if (!isAuthenticated) {
             instance.ssoSilent({
                 scopes: ['user.read.all', 'mail.send'],
-                // loginHint: 'daniel.guldberg@fifobusiness.com'
             }).then((response) => {
                 instance.setActiveAccount(response.account);
                 console.log('Active account was set in App.js under Pages!')
@@ -61,8 +58,6 @@ const Pages = () => {
                 }
             });
         };
-        // TODO: Er det korrekt at indsætte [instance, isAuthenticated] ?!
-        // }, [])
     }, [instance, isAuthenticated]);
 
     return (
@@ -70,7 +65,6 @@ const Pages = () => {
             <Route path="/" element={<GuestInfo />} />
             <Route path="/hostinfo" element={<HostInfo />} />
             <Route path="/end" element={<End />} />
-            {/* <Route path="/mail" element={<Mail />} /> */}
         </Routes>
     );
 };

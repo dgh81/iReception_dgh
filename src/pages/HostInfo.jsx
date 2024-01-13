@@ -12,8 +12,6 @@ export const GetAccessToken = async () => {
     };
 
     const currentAcc = msalInstance.getActiveAccount();
-    console.log(currentAcc);
-
     const accessTokenRequest = {
         scopes: ['user.read.all'],
         account: currentAcc,
@@ -21,9 +19,9 @@ export const GetAccessToken = async () => {
 
     let accessTokenResponse = {};
     let accessToken = {};
+
     try {
         accessTokenResponse = await msalInstance.acquireTokenSilent(accessTokenRequest);
-        // console.log('accessTokenResponse:' + accessTokenResponse);
     } catch (error) {
         console.log("FEJL: " + error);
     }
@@ -43,7 +41,6 @@ export const HostInfo = () => {
             fetchData('https://graph.microsoft.com/v1.0/users', accessToken)
                 .then(res => {
                     setUserList(res.value);
-                    console.log('res.value:' + JSON.stringify(res.value));
                 })
                 .catch(error => console.log(error));
         }).catch(err => console.log(err));
