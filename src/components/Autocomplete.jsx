@@ -12,7 +12,7 @@ const AutoComplete = ({ userList }) => {
         return user.displayName;
     });
 
-    // useRef bruges til at referere til en node i DOM.
+    // useRef bruges til at referere til en node i DOM
     // Her er node vores DIV med classname autocomplete.
     // useRef bruges her kun til "click outside functionality"
     const autocompleteRef = useRef();
